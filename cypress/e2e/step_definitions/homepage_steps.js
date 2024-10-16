@@ -5,8 +5,17 @@ import {
   } from "@badeball/cypress-cucumber-preprocessor";
   
 
-  When("the user visits homepage", () => {
+  Given ("the user visit portfolio webpage", () => {
+
+    //Visitar la pagina del portfolio
     cy.visit("/");
+
+    //Recargar la pagina del portfolio
+    // cy.reload();
+
+    //Borrar las cookies. No es necesario, porque cypress por defecto las borra.
+    //cy.clearCookies();
+
   });
 
  
