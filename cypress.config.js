@@ -23,7 +23,7 @@ module.exports = defineConfig({
     setupNodeEvents,
     specPattern: "cypress/e2e/features/*.feature",
     projectId: "89fsa7",
-    baseUrl: "https://bootcamp-qa.github.io/web-portfolio-template/",
+    baseUrl: "https://bootcamp-qa.github.io/portfolioqa/",
     chromeWebSecurity: true
   },
 });

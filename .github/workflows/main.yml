@@ -5,7 +5,7 @@ on:
     branches: 
       - main  # Ejecuta el flujo de trabajo cuando hay cambios en la rama principal
   schedule: 
-    - cron: '0 0 * * 0'  # Ejecuta el flujo de trabajo a medianoche (UTC) todos los domingos
+    - cron: '0 10 * * 1'  # Ejecuta el flujo de trabajo a medianoche (UTC) todos los domingos
   workflow_dispatch:  # Permite ejecutar el flujo de trabajo manualmente
 
 jobs:
