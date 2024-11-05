@@ -32,10 +32,18 @@ import {
 
   When ("the user press submit button", () => {
     cy.get("[data-testid='buttonsubmitform']").click();
-
-
   });
 
 
-  
- 
+  Then ("the user should not see portfolio url", () => {
+    //comprobamos que la url no contiene la palabra portfolioqa
+    //significa que el formulario se ha enviado porque ha dejado de mostrarse la pagina del portfolio
+    cy.url().should('not.include', 'portfolioqa');
+  });
+
+
+  Then ("the user should see portfolio url", () => {
+    //comprobamos que la url contiene la palabra portfolioqa
+    //significa que el formulario sigue mostrandose y no se ha enviado porque hay algun error
+    cy.url().should('include', 'portfolioqa');
+  });
